@@ -43,8 +43,8 @@
         <div>Sprzedawaj na Allegro</div>
         <div>Moje Allegro</div>
     </div>
-    <div class="ads"> REKLAMY
-          <!--  <div class="slider">
+    <div class="ads">
+          <div class="slider">
             <div class="slides">
                 <div class="slide active">
                     <img src="" alt="Slide 1">
@@ -63,7 +63,7 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-        </div> -->
+        </div>
     </div>
     <div class="product-container">
         <div class="product">
@@ -88,7 +88,7 @@
 			<img src="maslo.jpg" alt="Produkt">
 		</div>
     </div>
-    <!-- <script>
+    <script>
         let currentIndex = 0;
 
         function showSlide(index) {
@@ -123,6 +123,25 @@
         document.addEventListener('DOMContentLoaded', () => {
             showSlide(currentIndex);
         });
-    </script> -->
+    </script>
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const [btnAa, btnKontrast, btnTranskrypcja] = document.querySelectorAll('.btwcag');
+        const html = document.documentElement;
+        const body = document.body;
+
+        btnAa.addEventListener('click', () => {
+            html.classList.toggle('font-bigger');
+        });
+
+        btnKontrast.addEventListener('click', () => {
+            body.classList.toggle('high-contrast');
+        });
+
+        btnTranskrypcja.addEventListener('click', () => {
+            console.log("Transkrypcja kliknięta");
+        });
+    });
+	</script>
 </body>
 </html>

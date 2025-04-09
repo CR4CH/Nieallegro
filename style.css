@@ -5,6 +5,8 @@ body {
             background-color: #222;
             color: white;
         }
+		
+		/* WCAG */
 		.wcag{
 			display: flex;
 			justify-content: flex-end;
@@ -16,6 +18,21 @@ body {
 			border: 2px solid;
 			border-radius: 25px;
 		}
+		
+		/* Wysoki kontrast: żółty tekst na czarnym tle */
+		.high-contrast,
+		.high-contrast * {
+			background-color: #000 !important;
+			color: #ff0 !important;
+			border-color: #ff0 !important;
+		}
+
+		/* Zwiększona czcionka – na wszystko, w tym inputy i buttony */
+		.font-bigger,
+		.font-bigger * {
+			font-size: 105% !important;
+		}
+		
         .header {
             display: flex;
             align-items: center;

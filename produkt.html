@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allegro - Strona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wcag">
+		<button class="btwcag" >Aa</button>
+		<button class="btwcag" >Kontrast</button>
+		<button class="btwcag" >Transkrypcja</button>
+	</div>
+    <div class="header">
+        <div class="logo">Nieallegro</div>
+        <div class="center-elements">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Czego szukasz?">
+                </div>
+			    <select name="Kategorie" class="category-list">
+				    <option>Wszystkie Kategorie</option>
+				    <option>Tu wpisz drugą możliwość</option>
+			    </select>
+                <button class="btszukaj" >SZUKAJ</button>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-truck"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </div>
+    <div class="category-bar">
+        <div>Kategorie</div>
+        <div>Allegro Days do -40%</div>
+        <div>Allegro Protect</div>
+        <div>Gwarancja niskiej ceny</div>
+        <div>Sprzedawaj na Allegro</div>
+        <div>Moje Allegro</div>
+    </div>
+	<div>
+		<h2>MASŁO KLAROWNE GHEE Naturalne Świeże Idealne Do Patelni KETO Tłuszcz</h3>
+		<img src="maslo.jpg" alt="Produkt">
+	</div>
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const [btnAa, btnKontrast, btnTranskrypcja] = document.querySelectorAll('.btwcag');
+        const html = document.documentElement;
+        const body = document.body;
+
+        btnAa.addEventListener('click', () => {
+            html.classList.toggle('font-bigger');
+        });
+
+        btnKontrast.addEventListener('click', () => {
+            body.classList.toggle('high-contrast');
+        });
+
+        btnTranskrypcja.addEventListener('click', () => {
+            console.log("Transkrypcja kliknięta");
+        });
+    });
+	</script>
+</body>
+</html>

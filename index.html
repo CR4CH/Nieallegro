@@ -14,7 +14,9 @@
 		<button class="btwcag" >Transkrypcja</button>
 	</div>
     <div class="header">
-        <div class="logo">Nieallegro</div>
+        <div class="logo">
+            <a href="./index.html">Nieallegro</a>
+        </div>
         <div class="center-elements">
             <div class="search-container">
                 <div class="search-bar">
@@ -33,6 +35,17 @@
             <i class="fas fa-envelope"></i>
             <i class="fas fa-bell"></i>
             <i class="fas fa-shopping-bag"></i>
+        </div>
+    </div>
+
+    <div class="category-dropdown">
+        <button class="category-toggle" id="categoryToggle">Kategorie</button>
+        <div class="category-dropdown-list" id="categoryDropdownList">
+            <div>Allegro Days do -40%</div>
+            <div>Allegro Protect</div>
+            <div>Gwarancja niskiej ceny</div>
+            <div>Sprzedawaj na Allegro</div>
+            <div>Moje Allegro</div>
         </div>
     </div>
     <div class="category-bar">
@@ -141,7 +154,24 @@
         btnTranskrypcja.addEventListener('click', () => {
             console.log("Transkrypcja kliknięta");
         });
+
+        const categoryToggle = document.getElementById('categoryToggle');
+        const categoryDropdownList = document.getElementById('categoryDropdownList');
+        if (categoryToggle && categoryDropdownList) {
+            categoryToggle.addEventListener('click', function() {
+                categoryDropdownList.classList.toggle('show');
+                categoryToggle.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!categoryToggle.contains(e.target) && !categoryDropdownList.contains(e.target)) {
+                    categoryDropdownList.classList.remove('show');
+                    categoryToggle.classList.remove('open');
+                }
+            });
+        }
     });
 	</script>
 </body>
 </html>
+

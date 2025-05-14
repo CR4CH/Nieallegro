@@ -475,7 +475,7 @@ body {
         }
         @media (max-width: 600px) {
             .wcag {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-end;
                 gap: 6px;
                 margin: 8px 8px 0 0;
@@ -485,6 +485,9 @@ body {
                 min-width: unset;
                 font-size: 0.98rem;
                 padding: 0 6px;
+            }
+            .header {
+                flex-direction: column;
             }
             .search-container {
                 width: 100vw;

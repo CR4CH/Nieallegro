@@ -14,7 +14,9 @@
 		<button class="btwcag" >Transkrypcja</button>
 	</div>
     <div class="header">
-        <div class="logo">Nieallegro</div>
+        <div class="logo">
+            <a href="./index.html">Nieallegro</a>
+        </div>
         <div class="center-elements">
             <div class="search-container">
                 <div class="search-bar">
@@ -35,6 +37,16 @@
             <i class="fas fa-shopping-bag"></i>
         </div>
     </div>
+    <div class="category-dropdown">
+        <button class="category-toggle" id="categoryToggle">Kategorie</button>
+        <div class="category-dropdown-list" id="categoryDropdownList">
+            <div>Allegro Days do -40%</div>
+            <div>Allegro Protect</div>
+            <div>Gwarancja niskiej ceny</div>
+            <div>Sprzedawaj na Allegro</div>
+            <div>Moje Allegro</div>
+        </div>
+    </div>
     <div class="category-bar">
         <div>Kategorie</div>
         <div>Allegro Days do -40%</div>
@@ -43,12 +55,26 @@
         <div>Sprzedawaj na Allegro</div>
         <div>Moje Allegro</div>
     </div>
-	<div>
-		<center><h2>MASŁO KLAROWNE GHEE Naturalne Świeże Idealne Do Patelni KETO Tłuszcz</h3>
-		<img src="maslo.jpg" alt="Produkt">
-		<h3>59.99zł</h3></center>
-		
-	</div>
+    <div class="product-detail-container">
+        <div class="product-detail-image">
+            <img src="maslo.jpg" alt="Masło klarowne GHEE">
+        </div>
+        <div class="product-detail-info">
+            <h2>MASŁO KLAROWNE GHEE Naturalne Świeże Idealne Do Patelni KETO Tłuszcz</h2>
+            <p class="product-detail-price">59.99 zł</p>
+            <p class="product-detail-desc">
+                Masło klarowne GHEE to naturalny tłuszcz idealny do smażenia, pieczenia i gotowania. Świeże, bez dodatków, doskonałe dla diety KETO. Wysoka temperatura dymienia, delikatny smak, bogate w witaminy A, D, E, K. Produkt polski, 100% naturalny.
+            </p>
+            <ul class="product-detail-features">
+                <li>Waga: 900g</li>
+                <li>Skład: 100% masło klarowane</li>
+                <li>Kraj pochodzenia: Polska</li>
+                <li>Idealne do smażenia i pieczenia</li>
+                <li>Bez laktozy i kazeiny</li>
+            </ul>
+            <button class="btszukaj" style="margin-top: 18px; min-width: 180px;">Dodaj do koszyka</button>
+        </div>
+    </div>
 	<script>
     document.addEventListener('DOMContentLoaded', () => {
         const [btnAa, btnKontrast, btnTranskrypcja] = document.querySelectorAll('.btwcag');
@@ -66,7 +92,25 @@
         btnTranskrypcja.addEventListener('click', () => {
             console.log("Transkrypcja kliknięta");
         });
+
+        // Dropdown w mobilce
+        const categoryToggle = document.getElementById('categoryToggle');
+        const categoryDropdownList = document.getElementById('categoryDropdownList');
+        if (categoryToggle && categoryDropdownList) {
+            categoryToggle.addEventListener('click', function() {
+                categoryDropdownList.classList.toggle('show');
+                categoryToggle.classList.toggle('open');
+            });
+            // Ukrycie dropdownu 
+            document.addEventListener('click', function(e) {
+                if (!categoryToggle.contains(e.target) && !categoryDropdownList.contains(e.target)) {
+                    categoryDropdownList.classList.remove('show');
+                    categoryToggle.classList.remove('open');
+                }
+            });
+        }
     });
 	</script>
 </body>
 </html>
+

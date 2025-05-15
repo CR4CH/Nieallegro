@@ -346,7 +346,7 @@ body {
         .product-detail-features li {
             margin-bottom: 6px;
         }
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             .category-bar {
                 display: none;
             }

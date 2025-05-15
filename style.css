@@ -99,6 +99,7 @@ body {
         .category-list, .btszukaj {
             height: 40px;
             box-sizing: border-box;
+		color: #FFFFFF;
         }
         input[type="text"] {
             width: 100%;

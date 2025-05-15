@@ -473,7 +473,7 @@ body {
                 max-width: 100%;
             }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 880px) {
             .wcag {
                 flex-direction: row;
                 align-items: flex-end;
